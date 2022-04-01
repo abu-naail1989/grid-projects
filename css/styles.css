@@ -72,6 +72,13 @@ p {
   background: var(--primaryColor);
   color: var(--mainWhite);
 }
+.back-to-home {
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
 
 /* 
 =================
@@ -97,6 +104,11 @@ MAIN NAVBAR
 .main-navbar a:hover {
   color: var(--mainBlack);
 }
+.nav-background-img {
+  height: 93vh;
+  background: url(../images/mountain.jpg) center/cover fixed no-repeat;
+  object-fit: cover;
+}
 
 @media screen and (min-width: 992px) {
   .main-navbar ul {
@@ -107,5 +119,35 @@ MAIN NAVBAR
   }
   .main-navbar a {
     text-align: center;
+  }
+}
+/* 
+=================
+HERO
+================
+ */
+.hero-header {
+  min-height: 100vh;
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-banner p {
+  width: 80%;
+  max-width: 560px;
+  font-size: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .hero-banner {
+    padding: 0 3rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-header {
+    background: linear-gradient(rgba(241, 80, 37, 0.75), rgba(0, 0, 0, 0.75)),
+      url(../images/image-2.jpeg) center/cover fixed no-repeat;
   }
 }
