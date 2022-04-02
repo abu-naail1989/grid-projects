@@ -151,3 +151,57 @@ HERO
       url(../images/image-2.jpeg) center/cover fixed no-repeat;
   }
 }
+/* 
+=================
+CARDS
+================
+ */
+.title {
+  text-align: center;
+}
+.cards {
+  padding: 4rem 0;
+  background: #d3d3d3;
+}
+.cards-center {
+  width: 80vw;
+  max-width: 1170px;
+  margin: 2rem auto;
+}
+.card {
+  border: 1px solid var(--darkGrey);
+  margin-bottom: 3rem;
+}
+.card-info {
+  padding: 1rem;
+}
+.card-footer {
+  background: var(--darkGrey);
+  padding: 0.5rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  color: var(--primaryColor);
+}
+
+/* @media screen and (min-width: 768px) {
+  .cards-center {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .cards-center {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */
+/* grid inplace of media queries above */
+/* our max-width of 1170px -  64 px/ 3 (2 2rem gap) */
+
+.cards-center {
+  display: grid;
+  column-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
+}
